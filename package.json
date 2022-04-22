@@ -1,0 +1,30 @@
+{
+  "name": "cmsproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "make-seed": "npx knex seed:make dev --knexfile db/knexfile.js",
+    "seed": "npx knex seed:run --knexfile db/knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile db/knexfile.js",
+    "down": "npx knex migrate:down --knexfile db/knexfile.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^1.0.7",
+    "objection": "^3.0.1",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
